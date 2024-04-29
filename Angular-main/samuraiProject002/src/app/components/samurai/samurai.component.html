@@ -1,0 +1,13 @@
+<button (click)="getAll()">TEST</button>
+
+<form [formGroup]="samuraiForm" action="" (ngSubmit)="Create()">
+    <input type="text" id="id" id="id" placeholder="id" formControlName="id">
+    <input type="text" name="name" id="name" placeholder="name" formControlName="name">
+    <input type="text" description="description" id="description" placeholder="description" formControlName="description">
+    <input type="text" age="age" id="age" placeholder="age" formControlName="age">
+    <!--<button type="submit"(click)="create()">Create</button>-->
+    
+    
+    <button (click)="Create()">Create</button>
+
+</form>
