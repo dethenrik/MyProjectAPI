@@ -1,0 +1,7 @@
+.ng-valid.ng-touched input {
+    color: red;
+    border-color: yellow;
+}
+small.ng-touched{
+    color: blueviolet;
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Samurai } from 'src/app/models/Samurai';
 import { GenericService } from 'src/app/services/generic.service';
 
@@ -12,15 +12,19 @@ export class SamuraiComponent {
 samuraiList: Samurai [] = [];
 samurai: Samurai= {};
 
+
+//its a class even though its a method
 samuraiForm: FormGroup = new FormGroup({
-        //its a class even though its a method
-id: new FormControl(''),
-  // if u bring the word "new" then its still a class but, its the copy of it. its a class too, but its not the first one created.
+id: new FormControl('',[Validators.required, Validators.minLength(5)]),
 name: new FormControl(''),
 description: new FormControl(''),
+email: new FormControl('',[Validators.required, Validators.email]),
 age: new FormControl(''),
+});
+// [validators.required] bruges når du skal checke om feltet er Clicked, og [validators.minlenght(5)] sætter længden af din sætning.
+// [validators.email] checker om email er indtasted correct(Skal indeholde @ plus 2 bogstaver foran '@' og 2 efter)
 
-}); 
+
 
 profileForm: FormGroup = new FormGroup({
   //its a class even though its a method
