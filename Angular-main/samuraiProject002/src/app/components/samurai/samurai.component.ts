@@ -30,18 +30,13 @@ profileForm: FormGroup = new FormGroup({
   //its a class even though its a method
 firstName: new FormControl(''),
 LastName: new FormControl(''),
-
-
 }); 
 
 ngOnInit(): void{
-  
    this.getAll();
-
 }
 
 constructor(private service: GenericService<Samurai>) {
-    
 }
 
 getAll(): void{
@@ -49,9 +44,6 @@ getAll(): void{
      this.samuraiList= data;
      console.log(data)
      console.log(this.samuraiList); }//end getAll
-
-
-
 )};
 
 Create(): void {
