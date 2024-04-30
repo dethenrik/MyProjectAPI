@@ -15,11 +15,13 @@ samurai: Samurai= {};
 
 //its a class even though its a method
 samuraiForm: FormGroup = new FormGroup({
+
 id: new FormControl('',[Validators.required, Validators.minLength(5)]),
 name: new FormControl(''),
 description: new FormControl(''),
 email: new FormControl('',[Validators.required, Validators.email]),
 age: new FormControl(''),
+
 });
 // [validators.required] bruges når du skal checke om feltet er Clicked, og [validators.minlenght(5)] sætter længden af din sætning.
 // [validators.email] checker om email er indtasted correct(Skal indeholde @ plus 2 bogstaver foran '@' og 2 efter)
