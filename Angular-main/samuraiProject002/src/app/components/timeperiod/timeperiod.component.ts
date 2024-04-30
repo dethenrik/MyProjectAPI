@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Rank } from 'src/app/models/Rank';
 import { TimePeriod } from 'src/app/models/TimePeriod';
 import { GenericService } from 'src/app/services/generic.service';
 
@@ -8,30 +10,44 @@ import { GenericService } from 'src/app/services/generic.service';
   styleUrls: ['./timeperiod.component.css']
 })
 export class TimeperiodComponent {
+timeperiodList: TimePeriod [] = [];
+timeperiod: TimePeriod= {};
 
-  timePeriodList: TimePeriod [] = [];
 
+timeperiodForm: FormGroup = new FormGroup({
+
+id: new FormControl('',[Validators.required]),
+Date: new FormControl(''),
+});
+// [validators.required] bruges når du skal checke om feltet er Clicked, og [validators.minlenght(5)] sætter længden af din sætning.
+// [validators.email] checker om email er indtasted correct(Skal indeholde @ plus 2 bogstaver foran '@' og 2 efter)
+
+
+
+profileForm: FormGroup = new FormGroup({
+  //its a class even though its a method
+firstName: new FormControl(''),
+LastName: new FormControl(''),
+}); 
 
 ngOnInit(): void{
-   
-  this.getAll();
-
-   
-  
-
+   this.getAll();
 }
 
 constructor(private service: GenericService<TimePeriod>) {
-    
 }
 
 getAll(): void{
-  this.service.getAll('TimePeriod').subscribe(data => {
-      this.timePeriodList= data;
-      console.log(data)
-      console.log(this.timePeriodList); }//end getAll
- 
- )};
+ this.service.getAll('timeperiod').subscribe(data => {
+     this.timeperiodList= data;
+     console.log(data)
+     console.log(this.timeperiodList); }//end getAll
+)};
 
+Create(): void {
+console.log(this.timeperiodForm.value);
+this.timeperiod=this.timeperiodForm.value;
+}//end class
 
 }
+

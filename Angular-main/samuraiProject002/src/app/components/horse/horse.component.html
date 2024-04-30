@@ -1,1 +1,11 @@
-<button (click)="getAll()">Horse</button>
+<div>
+    <p>Here you can create a horseForm</p>
+</div>
+<form [formGroup]="horseForm" (ngSubmit)="Create()">
+    <input type="text" name="id" id="id" placeholder="id" formControlName="id">
+    <input type="text" name="name" id="name" placeholder="name" formControlName="name">
+    <input type="text" name="description" id="description" placeholder="description" formControlName="description">
+    <!--<button type="submit"(click)="create()">Create</button>-->
+    <button (click)="Create()">Create</button>
+
+</form>

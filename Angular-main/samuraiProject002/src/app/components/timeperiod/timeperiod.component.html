@@ -1,1 +1,10 @@
-<button (click)="getAll()">TimePeriod</button>
+<div>
+    <p>Here you can create a timeperiodForm</p>
+</div>
+<form [formGroup]="timeperiodForm" (ngSubmit)="Create()">
+    <input type="text" name="id" id="id" placeholder="id" formControlName="id">
+    <input type="date" name="date" id="date" placeholder="date" formControlName="date">
+    <!--<button type="submit"(click)="create()">Create</button>-->
+    <button (click)="Create()">Create</button>
+
+</form>

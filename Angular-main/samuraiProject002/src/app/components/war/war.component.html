@@ -1,1 +1,12 @@
-<button (click)="getAll()">War</button>
+<div>
+    <p>Here you can create a warForm</p>
+</div>
+<form [formGroup]="warForm" (ngSubmit)="Create()">
+    <input type="text" name="id" id="id" placeholder="id" formControlName="id">
+    <input type="date" name="name" id="name" placeholder="name" formControlName="name">
+    <input type="number" name="deathCount" id="deathCount" placeholder="deathCount" formControlName="deathCount">
+    <input type="text" name="location" id="location" placeholder="location" formControlName="location">
+    <!--<button type="submit"(click)="create()">Create</button>-->
+    <button (click)="Create()">Create</button>
+
+</form>
