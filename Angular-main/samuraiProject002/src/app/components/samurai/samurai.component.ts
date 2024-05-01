@@ -41,24 +41,26 @@ getAll(): void{
      console.log(this.samuraiList); }//end getAll
 )};
 
-Create(): void {
-console.log(this.samuraiForm.value);
-this.samurai=this.samuraiForm.value;
-}//end class
-
-Update(id: string): void {
-  const updatedSamurai: Samurai = this.samuraiForm.value;
-  this.service.Update(updatedSamurai, id, 'samurai').subscribe(() => {
-    this.getAll(); // Refresh the list after update
-    this.samuraiForm.reset(); // Reset form after successful update
-  });
+create(): void {
+  if (this.samuraiForm.valid) {
+    this.service.create('samurai', this.samuraiForm.value).subscribe(response => {
+      console.log('Samurai created successfully:', response);
+      // Optionally, you can reset the form after successful creation
+      this.samuraiForm.reset();
+      // You might want to update the list of samurais after creation
+      this.getAll();
+    }, error => {
+      console.error('Error occurred while creating Samurai:', error);
+    });
+  } else {
+    console.error('Form is invalid. Cannot create Samurai.');
+  }
 }
 
-Delete(id: string): void {
-  this.service.Delete(id, 'samurai').subscribe(() => {
-    this.getAll(); // Refresh the list after deletion
-  });
-}
 
+
+update(): void{
+
+}
 }
 

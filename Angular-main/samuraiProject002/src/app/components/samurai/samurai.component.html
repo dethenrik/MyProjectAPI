@@ -1,7 +1,7 @@
 <div>
     <p>Here you can create a samuraiForm</p>
 </div>
-<form [formGroup]="samuraiForm" action="" (ngSubmit)="Create()">
+<form [formGroup]="samuraiForm" action="" (ngSubmit)="create()">
     <input type="text" name="id" id="id" placeholder="id" formControlName="id">
     <input type="text" name="name" id="name" placeholder="name" formControlName="name">
     <input type="text" name="description" id="description" placeholder="description" formControlName="description">
@@ -12,8 +12,5 @@
     </small>
     <input type="text" name="age" id="age" placeholder="age" formControlName="age">
     
-    <button type="button" (click)="Create()">Create</button>
-    <button type="button" (click)="Update(samuraiForm.get('id')?.value)">Update</button>
-    <!-- Pass the id to the Delete method -->
-    <button type="button" (click)="Delete(samuraiForm.get('id')?.value)">Delete</button>
+    <button type="button" (click)="create()">Create</button>
 </form>
