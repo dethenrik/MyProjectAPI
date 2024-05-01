@@ -17,7 +17,7 @@ horseForm: FormGroup = new FormGroup({
 
 id: new FormControl('',[Validators.required]),
 name: new FormControl(''),
-desciption: new FormControl('')
+description: new FormControl('')
 
 });
 // [validators.required] bruges når du skal checke om feltet er Clicked, og [validators.minlenght(5)] sætter længden af din sætning.

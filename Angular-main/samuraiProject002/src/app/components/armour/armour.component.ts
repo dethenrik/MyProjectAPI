@@ -26,13 +26,6 @@ age: new FormControl(''),
 // [validators.email] checker om email er indtasted correct(Skal indeholde @ plus 2 bogstaver foran '@' og 2 efter)
 
 
-
-profileForm: FormGroup = new FormGroup({
-  //its a class even though its a method
-firstName: new FormControl(''),
-LastName: new FormControl(''),
-}); 
-
 ngOnInit(): void{
    this.getAll();
 }

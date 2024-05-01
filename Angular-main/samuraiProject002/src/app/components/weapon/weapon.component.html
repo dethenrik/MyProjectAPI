@@ -3,7 +3,7 @@
 </div>
 <form [formGroup]="weaponForm" (ngSubmit)="Create()">
     <input type="text" name="id" id="id" placeholder="id" formControlName="id">
-    <input type="date" name="name" id="name" placeholder="name" formControlName="name">
+    <input type="text" name="name" id="name" placeholder="name" formControlName="name">
     <!--<button type="submit"(click)="create()">Create</button>-->
     <button (click)="Create()">Create</button>
 

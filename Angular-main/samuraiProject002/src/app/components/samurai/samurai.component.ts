@@ -27,13 +27,6 @@ age: new FormControl(''),
 // [validators.email] checker om email er indtasted correct(Skal indeholde @ plus 2 bogstaver foran '@' og 2 efter)
 
 
-
-profileForm: FormGroup = new FormGroup({
-  //its a class even though its a method
-firstName: new FormControl(''),
-LastName: new FormControl(''),
-}); 
-
 ngOnInit(): void{
    this.getAll();
 }
@@ -52,6 +45,20 @@ Create(): void {
 console.log(this.samuraiForm.value);
 this.samurai=this.samuraiForm.value;
 }//end class
+
+Update(id: string): void {
+  const updatedSamurai: Samurai = this.samuraiForm.value;
+  this.service.Update(updatedSamurai, id, 'samurai').subscribe(() => {
+    this.getAll(); // Refresh the list after update
+    this.samuraiForm.reset(); // Reset form after successful update
+  });
+}
+
+Delete(id: string): void {
+  this.service.Delete(id, 'samurai').subscribe(() => {
+    this.getAll(); // Refresh the list after deletion
+  });
+}
 
 }
 

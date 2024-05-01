@@ -6,14 +6,14 @@
     <input type="text" name="name" id="name" placeholder="name" formControlName="name">
     <input type="text" name="description" id="description" placeholder="description" formControlName="description">
     <input type="text" name="email" id="email" placeholder="email" formControlName="email">
-<!--  <small> indenholder kode du kan bruge til at validerer om email er correct, tjek .ts fil for yderligere information  -->
+    <!--  <small> indenholder kode du kan bruge til at validerer om email er correct, tjek .ts fil for yderligere information  -->
     <small>
         <div *ngIf="samuraiForm.get('email')?.invalid && samuraiForm.get('email')?.touched"> email is incorrect</div>
     </small>
     <input type="text" name="age" id="age" placeholder="age" formControlName="age">
-    <!--<button type="submit"(click)="create()">Create</button>-->
     
-    
-    <button (click)="Create()">Create</button>
-
+    <button type="button" (click)="Create()">Create</button>
+    <button type="button" (click)="Update(samuraiForm.get('id')?.value)">Update</button>
+    <!-- Pass the id to the Delete method -->
+    <button type="button" (click)="Delete(samuraiForm.get('id')?.value)">Delete</button>
 </form>
