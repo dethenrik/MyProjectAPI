@@ -8,6 +8,8 @@ import { WeaponComponent } from './components/weapon/weapon.component';
 import { Samurai2Component } from './components/samurai2/samurai2.component';
 import { ClanComponent } from './components/clan/clan.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminPageComponent } from './components/AdminPage/admin-page/admin-page.component';
+import { TopNavComponent } from './components/Topnav/top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     SamuraiComponent,
     WeaponComponent,
     Samurai2Component,
-    ClanComponent
+    ClanComponent,
+    AdminPageComponent,
+    TopNavComponent
   ],
   imports: [
     BrowserModule,

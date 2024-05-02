@@ -42,10 +42,15 @@ export class SamuraiComponent implements OnInit {
     )
   }
 
-  // deleteSamurai(id: number): void {
-  //   this.service.delete('samurai', id).subscribe(() => {
-  //     // Reload the list after deletion
-  //     this.getAll();
-  //   });
-  // }
+  deleteSamurai(id: number): void {
+    this.service.delete('samurai', id).subscribe(() => {
+      // Remove the deleted samurai from the list
+      this.samuraiList = this.samuraiList.filter(samurai => samurai.id !== id);
+    });
+  }
+
+  editSamurai(samurai: Samurai): void {
+    // Implement your logic for updating a samurai
+    // For example, you can open a modal or navigate to a different component for editing
+  }
 }

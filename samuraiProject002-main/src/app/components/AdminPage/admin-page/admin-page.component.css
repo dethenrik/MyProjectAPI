@@ -1,0 +1,124 @@
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  nav {
+    background-color: #000060;
+    color: #9a7c18;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 40px;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(190, 166, 25);
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+
+  a:shadow {
+    background-color: maroon;
+  }
+
+  .containerCreate {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 100px;
+    display: none;
+  }
+
+  form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: navy;
+    color: gold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: maroon;
+  }
+
+  small {
+    color: red;
+  }
+
+  @media (max-width: 768px) {
+    li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+
+
+
+/*content list*/
+
+.samurai-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for samurai information */
+  .samurai-info {
+    margin-bottom: 10px;
+  }
+  
+  /* Style for samurai name */
+  .samurai-name {
+    font-weight: bold;
+  }
+  
+  /* Style for samurai actions */
+  .samurai-actions {
+    margin-top: 10px;
+  }
+  
+  /* Style for delete and edit buttons */
+  .delete-button,
+  .edit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  /* Hover effect for delete and edit buttons */
+  .delete-button:hover,
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
