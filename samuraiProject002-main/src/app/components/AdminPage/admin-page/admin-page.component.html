@@ -10,13 +10,13 @@
 <button (click)="toggleVisibility('horses')">Show Horses</button>
   
 <div class="containerCreate" id="samurai" [style.display]="samuraiVisible ? 'block' : 'none'">
-    <app-samurai></app-samurai>
+    <app-create-samurai></app-create-samurai>
 </div>
 <div class="containerCreate" id="clan" [style.display]="clanVisible ? 'block' : 'none'">
-  <app-clan></app-clan>
+  <!--<app-Create-Clan></app-Create-Clan>-->
 </div>
 <div class="containerCreate" id="weapon" [style.display]="weaponVisible ? 'block' : 'none'">
-    <app-weapon></app-weapon>
+    <!--<app-weapon></app-weapon>-->
 </div>
 <div class="containerCreate" id="armour" [style.display]="armourVisible ? 'block' : 'none'">
   <!-- Content for Armour -->dflgkhsædfg
@@ -54,9 +54,9 @@
         <!-- Samurai actions -->
         <div class="samurai-actions">
           <!-- Delete button -->
-          <button class="delete-button" (click)="deleteSamurai(samurai.id!)">Delete</button>
-          <!-- Edit button -->
-          <button class="edit-button" (click)="editSamurai(samurai)">Edit</button>
+          <!--<button class="delete-button" (click)="deleteSamurai(samurai.id!)">Delete</button>
+           Edit button -->
+          <!--<button class="edit-button" (click)="editSamurai(samurai)">Edit</button>-->
         </div>
       </div>
     </div>

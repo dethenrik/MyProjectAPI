@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { SamuraiComponent } from '../../samurai/samurai.component';
+import { CreateSamuraiComponent } from '../../CreateSamurai/create-samurai/create-samurai.component';
 
 @Component({
   selector: 'app-admin-page',
   templateUrl: './admin-page.component.html',
   styleUrls: ['./admin-page.component.css']
 })
-export class AdminPageComponent extends SamuraiComponent {
+export class AdminPageComponent extends CreateSamuraiComponent {
   samuraiVisible: boolean = false;
   clanVisible: boolean = false;
   weaponVisible: boolean = false;

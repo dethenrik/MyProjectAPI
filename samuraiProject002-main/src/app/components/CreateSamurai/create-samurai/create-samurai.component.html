@@ -1,0 +1,10 @@
+<!-- <button (click)="getAll()">GetSamurai</button> -->
+<form [formGroup]="samuraiForm" action="" (ngSubmit)="Create()">
+    <input type="text" name="samuraiName" id="samuraiName" placeholder="name" formControlName="samuraiName">
+    <small><div *ngIf="samuraiForm.get('samuraiName')?.invalid && samuraiForm.get('samuraiName')?.touched">
+      {{error}}
+    </div></small>
+    <input type="text" name="description" id="description" placeholder="description" formControlName="description">
+    <input type="number" name="age" id="age" placeholder="age" formControlName="age">
+    <button type="submit">Create Samurai</button>
+  </form>

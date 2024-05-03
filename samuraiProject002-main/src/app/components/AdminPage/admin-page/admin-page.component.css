@@ -55,7 +55,7 @@
   }
 
   button {
-    background-color: navy;
+    background-color: maroon;
     color: gold;
     border: none;
     padding: 10px 20px;
@@ -64,7 +64,7 @@
   }
 
   button:hover {
-    background-color: maroon;
+    background-color: rgb(106, 1, 1);
   }
 
   small {
