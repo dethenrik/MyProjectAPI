@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { CreateSamuraiComponent } from '../../CreateSamurai/create-samurai/create-samurai.component';
-
+import { GenericService } from 'src/app/services/generic.service';
+import { Samurai } from 'src/app/models/Samurai';
 @Component({
   selector: 'app-admin-page',
   templateUrl: './admin-page.component.html',
   styleUrls: ['./admin-page.component.css']
 })
-export class AdminPageComponent extends CreateSamuraiComponent {
+export class AdminPageComponent extends CreateSamuraiComponent{
+
   samuraiVisible: boolean = false;
   clanVisible: boolean = false;
   weaponVisible: boolean = false;
@@ -15,6 +17,7 @@ export class AdminPageComponent extends CreateSamuraiComponent {
   warVisible: boolean = false;
   clothingVisible: boolean = false;
   horsesVisible: boolean = false;
+
 
   toggleVisibility(section: string) {
     switch (section) {
