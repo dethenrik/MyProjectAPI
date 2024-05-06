@@ -24,10 +24,10 @@ export class GenericService<T> {
     return this.http.get<T[]>(url);
   }
 
-  delete(name: string, entityToDelete: number): Observable<any> {
-    const url = `${this.urlNew}${name}/${entityToDelete}`;
+  delete(name: string, id: number): Observable<any> {
+    const url = `${this.urlNew}${name}/${id}`;
     return this.http.delete(url);
-  }
+    }
   create(s:T, endpoint:string): Observable<T>{
     return this.http.post<T>(`${this.urlNew}${endpoint}`,s,httpOptions);
   }

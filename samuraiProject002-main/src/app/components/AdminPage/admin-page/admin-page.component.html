@@ -1,37 +1,39 @@
 <app-top-nav></app-top-nav>
 
-<button (click)="toggleVisibility('samurai')">Show Samurai</button>
-<button (click)="toggleVisibility('clan')">Show Clan</button>
-<button (click)="toggleVisibility('weapon')">Show Weapon</button>
-<button (click)="toggleVisibility('armour')">Show Armour</button>
-<button (click)="toggleVisibility('timeperiod')">Show Timeperiod</button>
-<button (click)="toggleVisibility('war')">Show War</button>
-<button (click)="toggleVisibility('clothing')">Show Clothing</button>
-<button (click)="toggleVisibility('horses')">Show Horses</button>
+<button class="samuraiButton" (click)="toggleVisibility('samurai')">Show Samurai</button>
+<button class="clanButton" (click)="toggleVisibility('clan')">Show Clan</button>
+<button class="weaponButton" (click)="toggleVisibility('weapon')">Show Weapon</button>
+<button class="armourButton" (click)="toggleVisibility('armour')">Show Armour</button>
+<button class="timeperiodButton" (click)="toggleVisibility('timeperiod')">Show Timeperiod</button>
+<button class="warButton" (click)="toggleVisibility('war')">Show War</button>
+<button class="clothingButton" (click)="toggleVisibility('clothing')">Show Clothing</button>
+<button class="horseButton" (click)="toggleVisibility('horses')">Show Horses</button>
+
+<hr class="hrtopnav">
   
 <div class="containerCreate" id="samurai" [style.display]="samuraiVisible ? 'block' : 'none'">
-    <app-create-samurai></app-create-samurai>
+    Create a Samurai: <app-create-samurai></app-create-samurai>
 </div>
 <div class="containerCreate" id="clan" [style.display]="clanVisible ? 'block' : 'none'">
-  <!--<app-Create-Clan></app-Create-Clan>-->
+  <!--<app-Create-Clan></app-Create-Clan>-->Clan
 </div>
 <div class="containerCreate" id="weapon" [style.display]="weaponVisible ? 'block' : 'none'">
-    <!--<app-weapon></app-weapon>-->
+    <!--<app-weapon></app-weapon>--> weapon
 </div>
 <div class="containerCreate" id="armour" [style.display]="armourVisible ? 'block' : 'none'">
-  <!-- Content for Armour -->dflgkhsædfg
+  <!-- Content for Armour --> armour
 </div>
 <div class="containerCreate" id="timeperiod" [style.display]="timeperiodVisible ? 'block' : 'none'">
-  <!-- Content for Timeperiod -->øsædkfåpvropm
+  <!-- Content for Timeperiod -->Timeperiod
 </div>
 <div class="containerCreate" id="war" [style.display]="warVisible ? 'block' : 'none'">
-  <!-- Content for War -->
+  <!-- Content for War -->War
 </div>
 <div class="containerCreate" id="clothing" [style.display]="clothingVisible ? 'block' : 'none'">
-  <!-- Content for Clothing -->
+  <!-- Content for Clothing -->Clothing
 </div>
 <div class="containerCreate" id="horses" [style.display]="horsesVisible ? 'block' : 'none'">
-  <!-- Content for Horses -->
+  <!-- Content for Horses -->Horses
 </div>
 
 
@@ -43,26 +45,28 @@
 <div class="samurai-list-container">
     <!-- Display the list of samurais -->
     <div *ngIf="samuraiList.length > 0">
-      <h2>List of Samurais</h2>
+      <h2 class="samuraiList">List of Samurais</h2>
       <div *ngFor="let samurai of samuraiList" class="samurai-item">
         <!-- Samurai information -->
         <table>
           <thead>
               <tr>
-                  <th>Name</th>
-                  <th>Description</th>
-                  <th>Age</th>
+                  <th class="name">Name</th>
+                  <th class="description">Description</th>
+                  <th class="age">Age</th>
                   <th class="action">Action</th>
               </tr>
           </thead>
           <tbody>
               <tr>
-                  <td>{{ samurai.samuraiName }}</td>
-                  <td>{{ samurai.description }}</td>
-                  <td>{{ samurai.age }}</td>
+                  <td class="name">{{ samurai.samuraiName }}</td>
+                  <td class="description">{{ samurai.description }}</td>
+                  <td class="age">{{ samurai.age }}</td>
                   <td>
-                      <button class="btn-delete">Delete</button>
-                      <button class="btn-update">Update</button>
+                    <!-- Pass samurai id to deleteSamurai method -->
+                    <button type="button" class="btn-delete" (click)="deleteSamurai(samurai.samuraiId)">Delete</button>
+                    <!-- Add Update functionality here -->
+                    <button type="submit" class="btn-update">Update</button>
                   </td>
               </tr>
               <!-- Add more rows here -->
@@ -72,6 +76,6 @@
     </div>
     <!-- Message when there are no samurais -->
     <div *ngIf="samuraiList.length === 0">
-      <h2>No Samurais Available</h2>
+      <h2 class="nosamurai">No Samurais Available</h2>
     </div>
   </div>

@@ -32,6 +32,15 @@
   a:shadow {
     background-color: maroon;
   }
+  .hrtopnav{
+
+  }
+  .samuraiList{
+    text-align: center;
+  }
+  .nosamurai{
+    text-align: center;
+  }
 
   .containerCreate {
     max-width: 800px;
@@ -54,17 +63,66 @@
     box-sizing: border-box;
   }
 
-  button {
-    background-color: maroon;
-    color: gold;
+  .samuraiButton{
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    margin: 2%;
+
+  }
+  .clanButton{
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2%;
+  }
+  .weaponButton{
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2%;
+  }
+  .armourButton{
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2%;
+  }
+  .timeperiodButton{
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2%;
+  }
+  .warButton{
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2%;
+  }
+  .clothingButton{
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2%;
+  }
+  .horseButton{
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2%;
   }
 
   button:hover {
-    background-color: rgb(106, 1, 1);
+    box-shadow: 2px 2px 10px rgb(248, 177, 163);
   }
 
   small {
@@ -82,31 +140,55 @@
 
 
 /*content list*/
-
+.samurai-list-container{
+  border: 1px solid black;
+  padding: 2%;
+  padding-top: 0px;
+  margin: 2%;
+}
 
 table {
   border-collapse: collapse;
-  width: 100%;
   margin: 1%;
 }
 
 th, td {
+
+}
+
+
+.name{
   border: 1px solid black;
   padding: 8px;
   text-align: left;
-  width: 25%; /* Equal width for each column */
+  width: 10%; /* Equal width for each column */
+}
+.description{
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  width: 10%; /* Equal width for each column */
+}
+.age{
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  width: 1%; /* Equal width for each column */
 }
 .action{
   border: 1px solid black;
   padding: 8px;
   text-align: left;
-  width: 5px; /* Equal width for each column */
+  width: 1%; /* Equal width for each column */
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+td{
+  border: 1px solid black;
 
+}
 .btn-delete, .btn-update {
   padding: 5px 10px;
   background-color: #f44336;

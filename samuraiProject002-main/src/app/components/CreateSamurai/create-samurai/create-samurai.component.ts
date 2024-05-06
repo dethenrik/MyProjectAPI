@@ -53,10 +53,19 @@ export class CreateSamuraiComponent implements OnInit {
     }
   }
 
-   deleteSamurai(id: number): void {
-     this.service.delete('samurai', id).subscribe(() => {
-       // Reload the list after deletion
-       this.getAll();
-     });
-   }
+  deleteSamurai(samuraiId: number | undefined): void {
+    if (samuraiId !== undefined) {
+    this.service.delete('samurai', samuraiId).subscribe(result => {
+    if (result) {
+    console.log(`Samurai with ID ${samuraiId} deleted successfully.`);
+    this.getAll();
+    } else {
+    console.error(`Failed to delete Samurai with ID ${samuraiId}.`);
+    }
+    });
+    } else {
+    console.error('Cannot delete. Samurai ID is undefined.');
+    }
+    }
+    
 }
