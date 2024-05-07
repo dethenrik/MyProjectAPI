@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CreateSamuraiComponent } from '../../CreateSamurai/create-samurai/create-samurai.component';
-import { GenericService } from 'src/app/services/generic.service';
 import { Samurai } from 'src/app/models/Samurai';
+import { CreateSamuraiComponent } from '../../CreateSamurai/create-samurai/create-samurai.component';
+import { SamuraiService } from 'src/app/services/create-samurai.service';
 @Component({
   selector: 'app-admin-page',
   templateUrl: './admin-page.component.html',
   styleUrls: ['./admin-page.component.css']
 })
-export class AdminPageComponent extends CreateSamuraiComponent{
+export class AdminPageComponent{
 
   samuraiVisible: boolean = false;
   clanVisible: boolean = false;

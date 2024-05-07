@@ -9,7 +9,7 @@ import { GenericService } from 'src/app/services/generic.service';
   styleUrls: ['./create-samurai.component.css']
 })
 export class CreateSamuraiComponent implements OnInit {
-  samuraiList: Samurai[] = [];
+  public samuraiList: Samurai[] = [];
   samuraiVal?: Samurai;
   error: string = 'Name is required';
 
@@ -25,7 +25,7 @@ export class CreateSamuraiComponent implements OnInit {
     this.getAll();
   }
 
-  getAll(): void {
+  public getAll(): void {
     this.service.getAll('samurai').subscribe(data => {
       this.samuraiList = data;
       console.log(data);

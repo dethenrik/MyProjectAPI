@@ -42,13 +42,12 @@
 
 
 
-<div class="samurai-list-container">
-    <!-- Display the list of samurais -->
+<!-- <div class="samurai-list-container">
     <div *ngIf="samuraiList.length > 0">
       <h2 class="samuraiList">List of Samurais</h2>
-      <div *ngFor="let samurai of samuraiList" class="samurai-item">
+      <div *ngFor="let samurai of samuraiList" class="samurai-item">-->
         <!-- Samurai information -->
-        <table>
+        <!-- <table> 
           <thead>
               <tr>
                   <th class="name">Name</th>
@@ -62,20 +61,20 @@
                   <td class="name">{{ samurai.samuraiName }}</td>
                   <td class="description">{{ samurai.description }}</td>
                   <td class="age">{{ samurai.age }}</td>
-                  <td>
+                  <td>-->
                     <!-- Pass samurai id to deleteSamurai method -->
-                    <button type="button" class="btn-delete" (click)="deleteSamurai(samurai.samuraiId)">Delete</button>
+                    <!--<button type="button" class="btn-delete" (click)="deleteSamurai(samurai.samuraiId)">Delete</button>-->
                     <!-- Add Update functionality here -->
-                    <button type="submit" class="btn-update">Update</button>
+                    <!-- <button type="submit" class="btn-update">Update</button> 
                   </td>
-              </tr>
+              </tr>-->
               <!-- Add more rows here -->
-          </tbody>
+          <!-- </tbody> 
       </table>
       </div>
-    </div>
+    </div>-->
     <!-- Message when there are no samurais -->
-    <div *ngIf="samuraiList.length === 0">
+    <!-- <div *ngIf="samuraiList.length === 0"> 
       <h2 class="nosamurai">No Samurais Available</h2>
     </div>
-  </div>
+  </div> -->
