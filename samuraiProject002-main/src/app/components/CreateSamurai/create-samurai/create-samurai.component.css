@@ -28,8 +28,6 @@
     background-color: maroon;
     border: 0.5px solid black;
   }
-  
-  
   input[type="text"],
   input[type="number"],
   button[type="submit"] {
@@ -56,11 +54,6 @@
     color: red;
     font-size: 12px;
   }
-  
-
-
-
-
 
 .samurai-list-container{
     border: 1px solid black;
@@ -74,8 +67,6 @@
     border-collapse: collapse;
     margin: 1%;
   }
-  
-  
   
   .name{
     border: 1px solid black;
@@ -129,8 +120,6 @@
   .btn-delete:hover, .btn-update:hover {
     background-color: #d32f2f;
   }
-
-
 
 /* Style for dropdown menus */
 .dropdown-container select {
