@@ -1,5 +1,5 @@
 export class Clan{
 
-    id?: number=0; 
-    name?: string=""; 
+    clanId?: number=0; 
+    clanName?: string=""; 
 }

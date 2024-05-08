@@ -3,6 +3,13 @@
     font-family: Arial, sans-serif;
   }
 
+.hrtopnav{
+  height: 0.2vh;
+  background-color: maroon;
+  border: 0.5px solid black;
+}
+
+
   nav {
     background-color: #000060;
     color: #9a7c18;
@@ -31,9 +38,6 @@
   a:shadow {
     background-color: maroon;
   }
-  .hrtopnav{
-
-  }
   .samuraiList{
     text-align: center;
   }
@@ -42,11 +46,6 @@
   }
 
   .containerCreate {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-left: 100px;
-    display: none;
   }
 
   form {
@@ -61,7 +60,9 @@
     padding: 10px;
     box-sizing: border-box;
   }
-
+.buttonGroup{
+  text-align: center;
+}
   .samuraiButton{
     border: none;
     padding: 10px 20px;
@@ -91,21 +92,7 @@
     border-radius: 5px;
     margin: 2%;
   }
-  .timeperiodButton{
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 2%;
-  }
   .warButton{
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 2%;
-  }
-  .clothingButton{
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -149,10 +136,6 @@
 table {
   border-collapse: collapse;
   margin: 1%;
-}
-
-th, td {
-
 }
 
 

@@ -24,6 +24,7 @@ export class CreateSamuraiComponent implements OnInit {
   ngOnInit(): void {
     this.getAll();
   }
+  
 
   public getAll(): void {
     this.service.getAll('samurai').subscribe(data => {

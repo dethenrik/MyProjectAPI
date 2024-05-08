@@ -13,7 +13,7 @@ import { CreateSamuraiComponent } from './components/CreateSamurai/create-samura
     AppComponent,
     AdminPageComponent,
     TopNavComponent,
-    CreateSamuraiComponent
+    CreateSamuraiComponent,
   ],
   imports: [
     BrowserModule,
